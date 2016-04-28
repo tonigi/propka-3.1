@@ -103,12 +103,12 @@ class Conformation_container:
         return
 
 
-    def find_non_covalently_coupled_groups(self, verbose=False):
+    def find_non_covalently_coupled_groups(self):
         # check if non-covalent coupling has already been set up in an input file
         if len(list(filter(lambda g: len(g.non_covalently_coupled_groups)>0, self.get_titratable_groups())))>0:
             self.non_covalently_coupled_groups = True
 
-        propka.coupled_groups.nccg.identify_non_covalently_coupled_groups(self,verbose=verbose)
+        propka.coupled_groups.nccg.identify_non_covalently_coupled_groups(self)
 
         # re-do the check
         if len(list(filter(lambda g: len(g.non_covalently_coupled_groups)>0, self.get_titratable_groups())))>0:

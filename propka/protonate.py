@@ -10,8 +10,8 @@ from propka.lib import info, warning, debug
 class Protonate:
     """ Protonates atoms using VSEPR theory """
 
-    def __init__(self, verbose=False):
-        self.verbose=verbose
+    def __init__(self):
+        # self.verbose seems unused
 
         self.valence_electrons = {'H': 1,
                                   'He':2,

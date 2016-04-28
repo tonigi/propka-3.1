@@ -5,13 +5,14 @@ from __future__ import print_function
 import string, propka.lib, propka.group
 
 from . import hybrid36
+from propka.lib import info, warning
 
 class Atom:
     """
       Atom class - contains all atom information found in the pdbfile
     """
 
-    def __init__(self, line=None, verbose=False):
+    def __init__(self, line=None):
 
         self.set_properties(line)
 

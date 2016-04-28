@@ -100,7 +100,7 @@ class Molecular_container:
     def find_non_covalently_coupled_groups(self):
         info('-' * 103)
         for name in self.conformation_names:
-            self.conformations[name].find_non_covalently_coupled_groups(verbose=self.options.display_coupled_residues)
+            self.conformations[name].find_non_covalently_coupled_groups()
 
         return
 

@@ -167,7 +167,7 @@ def loadOptions(*args):
     parser.add_option("-v", "--version", dest="version_label", default="Jan15",
            help="specifying the sub-version of propka [Jan15/Dec19]")
     parser.add_option("-p", "--parameters",dest="parameters", default=pkg_resources.resource_filename(__name__, "propka.cfg"),
-           help="set the parameter file [%default]")
+                      help="set the parameter file [%default]")
     parser.add_option("-q", "--no-print", dest="verbosity", action="store_const", const=0, default=1,
            help="inhibit printing to stdout")
     parser.add_option("-z", "--verbose", dest="verbosity", action="store_const", const=2,
