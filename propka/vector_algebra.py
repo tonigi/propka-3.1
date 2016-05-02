@@ -236,7 +236,7 @@ class multi_vector:
                     atom2.setConfiguration(key)
                 v = vector(atom1=atom1, atom2=atom2)
                 self.vectors.append(v)
-                #print(key,v)
+                #info(key,v)
         return
     
     def __getattribute__(self,name):
@@ -253,7 +253,7 @@ class multi_vector:
 
 
     def do_job(self, job):
-        #print(job)
+        #info(job)
         self.res = multi_vector()
         for i in range(len(self.vectors)):
             self.res.vectors.append(eval('self.vectors[%d].%s()'%(i,job)))
